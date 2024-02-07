@@ -9,8 +9,22 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+			if(arr.length < 2){
+				return "-Infinity";
+			}
+			let max = -9999;
+			let second = -9999;
+
+			for(let num of arr){
+				if(num > max){
+					second = max;
+					max = num;
+				}else if(num > second){
+					second = num;
+				}
+			}
+
+			return second;
 		}
 
 		function Main() {
