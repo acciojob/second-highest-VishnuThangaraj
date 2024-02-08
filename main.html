@@ -10,7 +10,7 @@
 	<script>
 		function secondHighest(arr) {
 			if(arr.length < 2){
-				return "undefined";
+				return "-Infinity";
 			}
 			let max = -999999;
 			let second = -999999;
@@ -24,6 +24,7 @@
 				}
 			}
 
+			if(max == second) return "-Infinity";
 			return second;
 		}
 
